@@ -1,0 +1,139 @@
+
+{% extends 'admin/baseform.html' %}
+{% load static %}
+{% block content %}
+
+
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3> Profile Details </h3>
+              </div>
+              
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                
+                    
+                   <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent ">
+            <img class="profile_img" src="https://source.unsplash.com/250x300/?student" alt="student dp">
+            <h3>Ishmam Ahasan Samin</h3>
+          </div>
+         
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class=" pr-1"></i>General Information</h3>
+          </div>
+          <div class="card-body pt-0">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%">Roll</th>
+                <td width="2%">:</td>
+                <td>125</td>
+              </tr>
+              <tr>
+                <th width="30%">Academic Year	</th>
+                <td width="2%">:</td>
+                <td>2020</td>
+              </tr>
+              <tr>
+                <th width="30%">Gender</th>
+                <td width="2%">:</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <th width="30%">Religion</th>
+                <td width="2%">:</td>
+                <td>Group</td>
+              </tr>
+              <tr>
+                <th width="30%">blood</th>
+                <td width="2%">:</td>
+                <td>B+</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+          
+
+      </div>
+    </div>
+  </div>
+                  
+                    
+                      
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        
+
+
+ <!-- page content -->
+        
+            
+      <div class="modal fade" id="user" role="dialog">
+    <form class="form-valide" method="POST" action="/adminpanel/profileUpdate/" enctype="multipart/form-data">
+        {% csrf_token%}
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 align="center" class="modal-title">Update Profile</h4>
+                </div>
+                <div class="modal-body" id="userprof">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary active">Update</button>
+                    <button type="button" class="btn btn-primary active" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>   
+      {% endblock %}   
+	{% block jsscript%}
+  <script type="text/javascript">
+ 
+
+  var readUrl = function(file) {
+    var input = file.target;
+
+    var reader = new FileReader();
+    reader.onload = function(){
+      var dataURL = reader.result;
+      var output = document.getElementById('output');
+      output.src = dataURL;
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+  </script>
+<script src= '{% static "admin/customjs/contact.js" %}'></script>
+  
+  {% endblock %}
+
+       

@@ -1,0 +1,135 @@
+
+{% extends 'app/base.html' %}
+{% load static %}
+ {% block title %}
+	 <title>Unicor - 
+	About Us</title>
+         
+        
+           
+         
+    {% endblock %}
+   
+  <body>
+    
+    <!-- Pre Header -->
+    <div id="pre-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p><i class="fas fa-mobile-alt"></i> - <span>9898989898</span> &nbsp; &nbsp; <i class="fas fa-envelope"></i> - <span>bhopal@gmail.com</span><p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Navigation -->
+	{% block menu %}
+
+ 
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'homeApp' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'products' %}">Products
+                
+				
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'abouts' %}">About Us</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+            </li>
+          </ul>
+        
+    
+          
+      {% endblock %}
+
+    <!-- Page Content -->
+    <!-- About Page Starts Here -->
+	{% block content1 %}
+    <div class="about-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1 ><span id="head"></span></h1>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-image">
+              <img src= "" id="aboutimage" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-content">
+              <h4 id="subhead"></h4>
+              <p ><span id="text1" > </span></p> 
+              <br>
+              <p id="text2"></p> 
+              
+              <br>
+              <p id="text3"></p> 
+              
+              <br>
+              <p id="text4"></p> 
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	{% endblock  %}
+    <!-- About Page Ends Here -->
+
+    <!-- Subscribe Form Starts Here -->
+    
+		{% block content2 %}
+    <div class="about-page1">
+    <div class="container">
+    <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1 id="ceri">CERTIFICATION</h1>
+            </div>
+          </div>
+         <div class="col-md-6">
+            <div class="left-image">
+              <img src='' id="certiimage" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-content main-content">
+             <div class="main-content" >
+              <p id="detail"> </p>
+              </div>
+             
+             
+            </div>
+          </div>
+          </div>
+         </div>
+         </div>
+       {% endblock %}
+    <!-- Subscribe Form Ends Here -->
+
+    	{% block script %}
+         <script type="text/javascript" src='{% static "app/customjs/about.js" %}'></script>
+         <script type="text/javascript" src='{% static "app/customjs/certificate.js" %}'></script>
+         <script src= '{% static "app/customjs/logo.js" %}' ></script>
+           
+         
+           {% endblock %}
+
+    
+    <!-- Footer Starts Here -->
+   

@@ -1,0 +1,162 @@
+{% extends 'app/base.html' %} {% load static %} {% block title %}
+<title>Unicor - Our Products</title>
+
+{% endblock %} {% block menu %}
+<!-- Navigation -->
+
+  
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'homeApp' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'products' %}">Products
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'abouts' %}">About Us</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+              <span class="sr-only">(current)</span>
+            </li>
+          </ul>
+        
+{% endblock %}
+
+<!-- Page Content -->
+<!-- About Page Starts Here -->
+{% block content1 %}
+
+<div class="contact-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <div class="line-dec"></div>
+          <h1>Contact Us</h1>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="map">
+          <!-- How to change your own map point
+                           1. Go to Google Maps
+                           2. Click on your location point
+                           3. Click "Share" and choose "Embed map" tab
+                           4. Copy only URL and paste it within the src="" field below
+                    -->
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.7220342246924!2d75.86779301427617!3d22.701389333953607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd1640000001%3A0x1734382776c7fa50!2sBlue%20Chip%20Computer%20Education%20(Sapna%20Sangeet%20Road%20)!5e0!3m2!1sen!2sin!4v1631126706107!5m2!1sen!2sin"
+            width="100%"
+            height="450px"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="right-content">
+          <div class="container">
+            <form id="contact" action="/enquiryAdd/" method="post">
+            {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6">
+                  <fieldset>
+                    <input
+                      name="name"
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your name..."
+                      required=""
+                    />
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <input
+                      name="email"
+                      type="text"
+                      class="form-control"
+                      id="email"
+                      placeholder="Your email..."
+                      required=""
+                    />
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <input
+                      name="mobile"
+                      type="text"
+                      class="form-control"
+                      id="subject"
+                      placeholder=" Your mobile number..."
+                      required=""
+                    />
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <textarea
+                      name="message"
+                      rows="6"
+                      class="form-control"
+                      id="message"
+                      placeholder="Your message..."
+                      required=""
+                    ></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="button">
+                      Send Message
+                    </button>
+                  </fieldset>
+                </div>
+                
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+ {% block content2 %}
+<div class="col-md-12">
+  <div class="section-heading">
+    <div class="line-dec"></div>
+    <h1>  OUR ADDRESS  </h1>
+  </div>
+</div>
+<div class="col-md-8 offset-md-2">
+  <div class="main-content">
+    <p> <strong>
+    <span id="ad1"></span>  &nbsp;<span id="ad2"></span>
+    </strong>
+    </p>
+     
+     <p>
+     <strong> Call :- </strong> &nbsp; <span id="cal"></span>&nbsp; &nbsp;  &nbsp;<strong> Email :-</strong> &nbsp;<span id="mail"></span>
+    </p>
+    
+  </div>
+</div>
+{% endblock %}
+
+ {% block script %}
+         <script type="text/javascript" src='{% static "app/customjs/maincontact.js" %}'></script>
+         <script src= '{% static "app/customjs/logo.js" %}' ></script>
+        
+           
+         
+      {% endblock %}
+

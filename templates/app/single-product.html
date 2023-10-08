@@ -1,0 +1,209 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}
+	 <title>Unicor - 
+	Product Details</title>
+         
+        
+           
+         
+    {% endblock %}
+   
+	   
+	   
+	   {% block menu %}
+
+    <!-- Navigation -->
+    
+         
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'homeApp' %}">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'products' %}">Products
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'abouts' %}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+            </li>
+          </ul>
+      
+
+     {% endblock %}
+
+    <!-- Page Content -->
+    <!-- Single Starts Here -->
+	{% block content1 %}
+    <div class="single-product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1>Product Detail</h1>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div >
+              <div id="slider">
+              <img src='{% static "app/assets/images/big-01.jpg" %}'% />
+               
+              </div>
+             
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-content">
+              <h4>Single Product Name</h4>
+             
+              
+              
+             
+             
+             
+             
+               
+             
+              
+             
+      
+      
+              
+<table class="table table-responsive custom-table">
+	        			<tbody>
+	        				<tr>
+	        					<td>CCT</td>
+	        					<td id="cct">80</td>
+	        				</tr>
+	        				<tr>
+	        					<td>CRI</td>
+	        					<td id="cri">80</td>
+	        				</tr>
+	        				<tr>
+	        					<td>Voltage</td>
+	        					<td id="voltage">110-310V,50Hz</td>
+	        				</tr>
+	        				<tr>
+	        					<td>PF</td>
+	        					<td id="pf">0.9</td>
+	        				</tr>
+	        				<tr>
+	        					<td>Housing</td>
+	        					<td id="housing">Polycarbonate</td>
+	        				</tr>
+	        				<tr>
+	        					<td>Mounting</td>
+	        					<td id="mounting">Recessed</td>
+	        				</tr>
+                  	<tr>
+	        					<td>About</td>
+	        					<td id="about">Proin commodo, diam a ultricies sagittis, erat odio rhoncus metus, eu feugiat lorem lacus aliquet arcu. Curabitur in gravida nisi, non placerat nibh. Praesent sit amet diam ultrices, commodo turpis id, dignissim leo. Suspendisse mauris massa, porttitor non fermentum vel, ullamcorper scelerisque velit.</td>
+	        				</tr>
+	        			</tbody>
+	        		</table>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	{% endblock%}
+    <!-- Single Page Ends Here -->
+
+
+    <!-- Similar Starts Here -->
+    
+    <!-- Similar Ends Here -->
+
+
+    <!-- Subscribe Form Starts Here -->
+    
+		{% block content2 %}
+          <div class="col-md-12">
+           <div class="main-content">
+          <table class="table table-condensed custom-table" style="color:#FFFFFF;" >
+		        			<thead>
+		        				<tr class="custom4">
+		        					<th width="10%" class="uk-text-center">Item Code</th>
+		        					<th width="10%" class="uk-text-center">Wattage (W)</th>
+                      <th width="10%" class="uk-text-center">Lumen</th>
+		        					<th width="10%" class="uk-text-center">Design</th>
+		        					<th width="10%" class="uk-text-center">Product Size (mm)</th>
+		        					<th width="10%" class="uk-text-center">Cutout (mm)</th>
+		        				</tr>
+		        			</thead>
+		        			<tbody>
+		        				<tr>
+		        					<td class="uk-text-center" >AESD-5WR </td>
+		        					<td class="uk-text-center" data-title="7W">5W</td>
+                      <td class="uk-text-center" data-title="7W">5W</td>
+		        					<td class="uk-text-center" data-title="12-16W">Round</td>
+		        					<td class="uk-text-center" data-title="18-24W">Ø95*26.5</td>
+		        					<td class="uk-text-center" data-title="32W">Ø75</td>
+		        				</tr>
+		        				<tr>
+		        					<td class="uk-text-center">AESD-5WS</td>
+		        					<td class="uk-text-center" data-title="7W">5W</td>
+                      <td class="uk-text-center" data-title="7W">5W</td>
+		        					<td class="uk-text-center" data-title="12-16W">Square</td>
+		        					<td class="uk-text-center" data-title="18-24W">95*95*26.5</td>
+		        					<td class="uk-text-center" data-title="32W">75*75</td>
+		        				</tr>
+		        				<tr>
+		        					<td class="uk-text-center">AESD-10WR</td>
+		        					<td class="uk-text-center" data-title="7W">10W</td>
+                      <td class="uk-text-center" data-title="7W">5W</td>
+		        					<td class="uk-text-center" data-title="12-16W">Round</td>
+		        					<td class="uk-text-center" data-title="18-24W">Ø130*26.5</td>
+		        					<td class="uk-text-center" data-title="32W">Ø100</td>
+		        				</tr>
+                                <tr>
+		        					<td class="uk-text-center">AESD-10WS</td>
+		        					<td class="uk-text-center" data-title="7W">10W</td>
+                      <td class="uk-text-center" data-title="7W">5W</td>
+		        					<td class="uk-text-center" data-title="12-16W">Square</td>
+		        					<td class="uk-text-center" data-title="18-24W">130*130*26.5</td>
+		        					<td class="uk-text-center" data-title="32W">100*100</td>
+		        				</tr>
+                                <tr>
+		        					<td class="uk-text-center">AESD-15WR</td>
+		        					<td class="uk-text-center" data-title="7W">15W</td>
+                      <td class="uk-text-center" data-title="7W">5W</td>
+		        					<td class="uk-text-center" data-title="12-16W">Round</td>
+		        					<td class="uk-text-center" data-title="18-24W">Ø160*26.5</td>
+		        					<td class="uk-text-center" data-title="32W">Ø130</td>
+		        				</tr>
+                                <tr>
+		        					<td class="uk-text-center" >AESD-15WS</td>
+		        					<td class="uk-text-center" data-title="7W">15W</td>
+                      <td class="uk-text-center" data-title="7W">5W</td>
+		        					<td class="uk-text-center" data-title="12-16W">Square</td>
+		        					<td class="uk-text-center" data-title="18-24W">160*160*26.5</td>
+		        					<td class="uk-text-center" data-title="32W">130*130</td>
+		        				</tr>
+		        			</tbody>
+		        		</table>
+
+            </div>
+          </div>
+        {% endblock %}
+    <!-- Subscribe Form Ends Here -->
+	  {% block script %}
+
+  
+    <script src= '{% static "app/customjs/logo.js" %}' ></script>
+    
+    
+
+    {% endblock %}
+
+
+
+    
+   

@@ -1,0 +1,113 @@
+{% extends 'app/base.html' %}
+{% load static %}
+       {% block title %} 
+	   <title>Unicor - 
+	Led Light House </title>
+	    {% endblock%}
+	   
+  {% block menu %}
+        
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'homeApp' %}">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'products' %}">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'abouts' %}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+            </li>
+          </ul>
+      
+
+               
+        
+        {% endblock %}
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+	{% block  content1 %}
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="caption">
+              <h2 id="bannertitle">The Light House</h2>
+             
+              
+              <div class="main-button">
+                <a href="#"> Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+    <!-- Featured Starts Here -->
+    <div class="featured-items">
+      <div class="container" >
+        <div class="row"  >
+          <div class="col-md-12" >
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1>Our Products </h1>
+            </div>
+          </div>
+          <div class="col-md-12"  >
+            <div class="owl-carousel owl-theme owl-loaded owl-drag "  >
+              <a href="single-product.html">
+                <div class="featured-item" >
+                  <img src="" id="owlimage" alt="">
+                  <h4 id="owlname"></h4>
+                 
+                </div>
+              </a>
+             
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	{% endblock %}
+    <!-- Featred Ends Here -->
+
+
+    <!-- Subscribe Form Starts Here -->
+    
+		{% block content2 %}
+          <div class="col-md-12">
+
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1 id="tagtitle">Unicor Led Lighting</h1>
+            </div>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <div class="main-content" >
+              <p id="tagtext1">Integer vel turpis ultricies, lacinia ligula id, lobortis augue. Vivamus porttitor dui id dictum efficitur. Phasellus vel interdum elit.</p>
+			   <p id="tagtext2">Integer vel turpis ultricies, lacinia ligula id, lobortis augue. Vivamus porttitor dui id dictum efficitur. Phasellus vel interdum elit.</p>
+              
+            </div>
+          </div>
+        {% endblock %}
+    <!-- Subscribe Form Ends Here -->
+
+
+    
+    {% block script %}
+
+    <script type="text/javascript" src='{% static "app/customjs/index.js" %}'></script>
+    <script type="text/javascript" src='{% static "app/customjs/tagline.js" %}'></script>
+    <script type="text/javascript" src='{% static "app/customjs/product.js" %}'></script>
+    <script src= '{% static "app/customjs/logo.js" %}' ></script>
+    
+
+    {% endblock %}
